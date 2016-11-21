@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_mpin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <ImageView
+
+        android:id="@+id/ivChangeMpin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:text="@string/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+        android:id="@+id/tvSettingmageText"
+
+        />
+
+
+    <ScrollView
+        android:layout_below="@+id/tvSettingmageText"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_mpin"
+                android:id="@+id/tv_change_mpin"
+                android:textColor="@color/HeaderGray"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginBottom="@dimen/twenty"
+                android:textSize="@dimen/thirty"
+                android:gravity="center"
+                />
+
+
+            <TextView
+                android:layout_below="@+id/tv_change_mpin"
+                android:id="@+id/tvexceptionmpin"
+                android:textColor="@color/submit_color"
+                android:layout_marginTop="@dimen/ten"
+                android:textSize="@dimen/fifteen"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+            <ProgressBar
+                android:layout_marginTop="@dimen/sixty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_below="@+id/tvForgotPasswordImage"
+                android:layout_centerHorizontal="true" />
+
+
+            <EditText
+                android:layout_below="@+id/tvexceptionmpin"
+                android:inputType="numberPassword"
+                android:maxLength="8"
+                android:layout_marginTop="@dimen/five"
+                android:gravity="center"
+                android:id="@+id/et_old_mpin"
+                style="@style/editextStyle"
+                android:hint="@string/old_mpin"
+                android:layout_height="@dimen/fourty_five"
+                android:layout_width="fill_parent"
+                android:scrollbars="vertical">
+            </EditText>
+
+            <EditText
+                android:layout_below="@+id/et_old_mpin"
+                android:inputType="numberPassword"
+                android:maxLength="8"
+                android:layout_marginTop="@dimen/five"
+                android:gravity="center"
+                android:id="@+id/et_new_mpin"
+                style="@style/editextStyle"
+                android:hint="@string/new_mpin"
+                android:layout_height="@dimen/fourty_five"
+                android:layout_width="fill_parent"
+                android:scrollbars="vertical">
+            </EditText>
+
+            <EditText
+                android:layout_below="@+id/et_new_mpin"
+                android:inputType="numberPassword"
+                android:maxLength="8"
+                android:ellipsize="end"
+                style="@style/editextStyle"
+                android:id="@+id/et_con_mpin"
+                android:hint="@string/con_mpin"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty_five"
+                android:textColor="@color/black"
+                android:gravity="center"
+                />
+
+
+            <Button
+                android:layout_below="@+id/et_con_mpin"
+                style="@style/buttonStyle"
+                android:text="@string/submit"
+                android:layout_marginTop="@dimen/ten"
+                android:id="@+id/btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:layout_marginBottom="30dp"
+                />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
+
+

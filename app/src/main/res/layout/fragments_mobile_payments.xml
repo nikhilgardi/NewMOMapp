@@ -1,0 +1,619 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:isScrollContainer="false">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:padding="@dimen/ten"
+        >
+
+        <TextView
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/MobilePayments"
+            android:textSize="@dimen/thirty"
+            android:gravity="center"
+            android:id="@+id/tv_Mobile_paymentsText"
+            android:textColor="@color/HeaderGray"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/ten" />
+        <TextView
+            android:layout_marginTop="@dimen/ten"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_Mobile_paymentsText"
+            android:id="@+id/tvExep"
+            android:textSize="@dimen/fifteen"
+            android:gravity="center"
+            android:textColor="@color/submit_color"
+            />
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/macPage1"-->
+        <!--android:layout_below="@+id/tvExep"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent">-->
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_below="@+id/tvExep"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/macPage1">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fourite_list"
+                android:textSize="@dimen/twenty"
+                android:gravity="center"
+                android:id="@+id/tv_favorite"
+                android:textColor="@color/HeaderGray"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/ten" />
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/ten"
+                android:layout_below="@+id/tv_favorite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/macPag1"
+                >
+
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/add_favorite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:text="@string/add_favorite_list" />
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/new_mobile_recharge"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/new_mobile_recharge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:ems="10" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/macPage2"
+            android:layout_below="@+id/macPage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <FrameLayout
+                android:id="@+id/framevalue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:orientation="horizontal"
+                android:layout_below="@+id/et_beneficiary_mobno"
+                android:layout_marginTop="@dimen/ten">
+
+                <Spinner
+                    android:id="@+id/spinnervalue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editbackground"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+
+
+
+
+            <FrameLayout
+                android:id="@+id/framevalue1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:orientation="horizontal"
+                android:layout_below="@+id/framevalue"
+                android:layout_marginTop="@dimen/ten">
+
+                <Spinner
+                    android:id="@+id/spinneraction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editbackground"
+                    android:spinnerMode="dropdown"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/fifteen"
+                android:layout_below="@+id/framevalue1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lbtn"
+                >
+
+                <Button
+
+                    style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/btnaction"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:text="@string/submit" />
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/btn_cancel"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:ems="10" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <!--</RelativeLayout>-->
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/macPage3"
+            android:layout_below="@+id/macPage2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/five"
+                android:layout_marginTop="@dimen/five">
+
+
+                <Spinner
+                    android:id="@+id/spinnerMobPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editbackground"
+                    android:spinnerMode="dropdown"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+            <AutoCompleteTextView
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/et_enter_amount_recharge"
+                android:maxLength="10"
+                android:gravity="center"
+                android:hint="@string/enterMobileno"
+                style="@style/editextStyle"
+                android:inputType="number"
+                android:dropDownHeight="200dp"
+                android:id="@+id/autoCustomerNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <ImageView
+                android:src="@drawable/contact"
+                android:layout_width="@dimen/fourty"
+                android:layout_height="@dimen/fourty"
+                android:text="@string/Contacts"
+                android:id="@+id/contact"
+                android:gravity="center"
+                android:paddingRight="@dimen/ten"
+                android:layout_alignTop="@+id/autoCustomerNo"
+                android:layout_alignBottom="@+id/autoCustomerNo"
+                android:layout_alignRight="@+id/autoCustomerNo"/>
+
+
+            <FrameLayout
+
+                android:id="@+id/frame1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/editbackground"
+                android:orientation="horizontal"
+                android:layout_below="@+id/autoCustomerNo"
+                android:layout_marginBottom="@dimen/five"
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinnerSelectOpr"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editbackground"
+                    android:spinnerMode="dropdown"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+
+            <EditText
+
+                android:maxLength="5"
+                android:ellipsize="end"
+                android:hint="@string/enter_amount"
+                style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:gravity="center"
+                android:id="@+id/et_enter_amount_recharge"
+                android:layout_below="@+id/frame1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:visibility="gone"
+                android:textColor="@color/bluebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fourty"
+                android:text="@string/browseplane"
+                android:id="@+id/browseplane"
+                android:gravity="center"
+                android:paddingRight="@dimen/ten"
+                android:layout_alignTop="@+id/et_enter_amount_recharge"
+                android:layout_alignBottom="@+id/et_enter_amount_recharge"
+                android:layout_alignRight="@+id/et_enter_amount_recharge"/>
+
+
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btnPay"
+                android:text="@string/Pay"
+                android:layout_below="@+id/et_enter_amount_recharge"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/ten"
+                />
+
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btnCalcelnew"
+                android:text="@string/cancel"
+                android:layout_below="@+id/btnPay"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/ten"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/macPage4"
+            android:layout_below="@+id/macPage3">
+            <FrameLayout
+                android:id="@+id/frameinsert"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="@dimen/ten">
+
+                <!--android:id="@+id/spinnerinsert"-->
+                <Spinner
+                    android:id="@+id/spinnerAddFav"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editbackground"
+                    android:spinnerMode="dropdown"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+            <AutoCompleteTextView
+                style="@style/editextStyle"
+                android:layout_below="@+id/frameinsert"
+                android:maxLength="10"
+                android:ellipsize="end"
+                android:inputType="number"
+                android:hint="@string/FavoriteMobileNumber"
+                android:id="@+id/et_FavoriteMobileNumber"
+                android:layout_marginTop="@dimen/five"
+                android:background="@android:drawable/edit_text"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/contact"
+                android:layout_width="@dimen/fourty"
+                android:layout_height="@dimen/fourty"
+                android:text="@string/Contacts"
+                android:id="@+id/addFavouriteContact"
+                android:gravity="center"
+                android:paddingRight="@dimen/ten"
+                android:layout_alignTop="@+id/et_FavoriteMobileNumber"
+                android:layout_alignBottom="@+id/et_FavoriteMobileNumber"
+                android:layout_alignRight="@+id/et_FavoriteMobileNumber"/>
+
+            <EditText
+                android:layout_below="@+id/et_FavoriteMobileNumber"
+                android:hint="@string/FavoriteName"
+                android:inputType="text"
+                android:ellipsize="end"
+                android:maxLength="30"
+                android:id="@+id/et_FavoriteName"
+                android:gravity="center"
+                style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btnAdd"
+                android:text="@string/add"
+                android:layout_below="@+id/et_FavoriteName"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/ten"
+                />
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btnCancelinsert"
+                android:text="@string/cancel"
+                android:layout_below="@+id/btnAdd"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="30dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:id="@+id/macPage5"
+            android:layout_below="@+id/macPage3">
+            <FrameLayout
+                android:id="@+id/frameinsert1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:orientation="horizontal"
+
+                android:layout_marginTop="@dimen/ten">
+
+                <!--android:id="@+id/spinnerinsertupdate"-->
+                <Spinner
+                    android:id="@+id/spinnerUpdateFav"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editbackground"
+                    android:spinnerMode="dropdown"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+
+            <AutoCompleteTextView
+                style="@style/editextStyle"
+                android:layout_below="@+id/frameinsert1"
+                android:maxLength="10"
+                android:ellipsize="end"
+                android:inputType="number"
+                android:hint="@string/FavoriteMobileNumber"
+                android:id="@+id/et_FavoriteMobileNumberupdate"
+                android:background="@android:drawable/edit_text"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"  />
+
+            <ImageView
+                android:src="@drawable/contact"
+                android:layout_width="@dimen/fourty"
+                android:layout_height="@dimen/fourty"
+                android:text="@string/Contacts"
+                android:id="@+id/UpdateFavouriteContact"
+                android:gravity="center"
+                android:paddingRight="@dimen/ten"
+                android:layout_alignTop="@+id/et_FavoriteMobileNumberupdate"
+                android:layout_alignBottom="@+id/et_FavoriteMobileNumberupdate"
+                android:layout_alignRight="@+id/et_FavoriteMobileNumberupdate"/>
+            <EditText
+                android:layout_below="@+id/et_FavoriteMobileNumberupdate"
+                android:hint="@string/FavoriteName"
+                android:inputType="text"
+                android:ellipsize="end"
+                android:maxLength="30"
+                android:id="@+id/et_FavoriteNameupdate"
+                android:gravity="center"
+                style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btnAddupdate"
+                android:text="@string/update"
+                android:layout_below="@+id/et_FavoriteNameupdate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/ten"
+                />
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btnCancelinsertupdate"
+                android:text="@string/cancel"
+                android:layout_below="@+id/btnAddupdate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="30dp"
+                />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/fifteen"
+            android:id="@+id/macPage6"
+            android:layout_below="@+id/macPage5">
+
+
+            <Button
+
+                style="@style/buttonStyle"
+                android:ellipsize="end"
+                android:text="@string/new_mobile_recharge1"
+                android:id="@+id/btn_new_mobile_recharge1"
+                android:layout_marginTop="@dimen/fifteen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                style="@style/buttonStyle"
+                android:ellipsize="end"
+                android:text="@string/recharge_with_favorite_list"
+                android:id="@+id/btn_recharge_with_favorite_list"
+                android:layout_marginTop="@dimen/fifteen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"  />
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:id="@+id/macPage7"
+            android:layout_below="@+id/macPage6">
+
+
+            <EditText
+                android:maxLength="8"
+                android:ellipsize="end"
+                android:inputType="numberPassword"
+                android:hint="@string/str_tpin"
+                android:id="@+id/et_tpin"
+                android:layout_marginTop="@dimen/fifteen"
+                style="@style/editextStyle"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btntpinsubmit"
+                android:text="@string/submit"
+                android:layout_below="@+id/et_tpin"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/ten"
+                />
+
+            <Button
+                style="@style/buttonStyle"
+                android:layout_below="@+id/btntpinsubmit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btntpincancel"
+                android:text="@string/cancel"/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:layout_above="@+id/macPage2"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

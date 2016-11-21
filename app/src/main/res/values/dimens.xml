@@ -1,0 +1,60 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--NIkhils Dimen-->
+    <dimen name="one">1dp</dimen>
+    <dimen name="two">2dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="fourty">40dp</dimen>
+    <dimen name="fifty">50dp</dimen>
+    <dimen name="sixty">60dp</dimen>
+    <dimen name="thirty">30dp</dimen>
+    <dimen name="eigthteen">18dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="twenty_four">24dp</dimen>
+    <dimen name="common">249dp</dimen>
+    <dimen name="lowest">0.5dp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="thirty_five">35dp</dimen>
+    <dimen name="sixteen">16dp</dimen>
+    <dimen name="fourty_five">45dp</dimen>
+    <dimen name="text_size">15sp</dimen>
+    <dimen name="text_size_header">20sp</dimen>
+    <dimen name="fifteen">15dp</dimen>
+    <dimen name="twenty_nine">29dp</dimen>
+    <dimen name="thirteen">13dp</dimen>
+    <dimen name="twenty_three">23dp</dimen>
+    <dimen name="seventy">70dp</dimen>
+
+    <dimen name="eighty">80dp</dimen>
+    <dimen name="eightyfive">85dp</dimen>
+    <dimen name="onehundredfive">105dp</dimen>
+    <dimen name="one_eighty">180dp</dimen>
+    <dimen name="hundred">100dp</dimen>
+    <dimen name="one_hundredfive">105dp</dimen>
+    <dimen name="thirthteen">13dp</dimen>
+    <dimen name="fourty_four">44dp</dimen>
+    <dimen name="twelve">12dp</dimen>
+    <dimen name="thirty_nine">39dp</dimen>
+    <dimen name="home_textview_width">95dp</dimen>
+
+    <!--Nikhils Dimen ends-->
+
+    <dimen name="textSizeThirty">30dp</dimen>
+    <dimen name="DevicePinEdittext">20dp</dimen>
+    <dimen name="NotificationDetailTextSize">20dp</dimen>
+
+
+    <dimen name="header_twenty_five">25dp</dimen>
+    <dimen name="inner_twenty">20dp</dimen>
+    <dimen name="ninty">90dp</dimen>
+    <dimen name="ninty_five">95dp</dimen>
+
+
+
+
+</resources>

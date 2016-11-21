@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".Tabhost_activity">
+
+    <!--<item-->
+        <!--android:id="@+id/alert"-->
+        <!--android:icon="@drawable/alert"-->
+        <!--android:title="Alert"-->
+        <!--android:orderInCategory="100"-->
+        <!--app:showAsAction="always"-->
+        <!--/>-->
+
+
+    <item
+
+        android:title="Alert"
+        android:id="@+id/badge"
+        app:actionLayout="@layout/actionbar_badge"
+        android:icon="@drawable/alert"
+        app:showAsAction="always">
+    </item>
+
+    <item
+    android:id="@+id/logout"
+    android:icon="@drawable/logout"
+    android:title="Logout"
+    android:orderInCategory="100"
+    app:showAsAction="always"
+    />
+</menu>

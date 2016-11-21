@@ -1,0 +1,280 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/gray"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:padding="@dimen/sixteen"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/billPayments"
+            android:gravity="center"
+            android:textSize="@dimen/thirty"
+            android:id="@+id/tvBillPayText"
+            android:textColor="#787878"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:layout_marginTop="@dimen/ten"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBillPayText"
+            android:id="@+id/tvExepBillPay"
+            android:textSize="@dimen/fifteen"
+            android:gravity="center"
+            android:textColor="@color/submit_color"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/page1"
+            android:layout_marginTop="@dimen/five"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvExepBillPay">
+
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty"
+            android:background="@drawable/editbackground"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="@dimen/ten">
+
+
+            <Spinner
+                android:id="@+id/spinnerBillType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/editbackground"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/white" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/arrow"
+                android:contentDescription="@string/app_name" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fourty"
+            android:background="@drawable/editbackground"
+            android:orientation="horizontal"
+            android:layout_below="@+id/frame"
+            android:layout_marginTop="@dimen/ten">
+            <Spinner
+                android:id="@+id/spinnerBillOpr"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/editbackground"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/white"
+                android:layout_below="@+id/spinnerbill"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/arrow"
+                android:contentDescription="@string/app_name" />
+        </FrameLayout>
+
+        <!--<Spinner-->
+        <!--android:text="Enter Mobile No."-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="28dp"-->
+        <!--android:id="@+id/spinner"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:background="@drawable/editbackground"-->
+
+        <!--/>-->
+        <EditText
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/five"
+            android:hint="@string/subscriberID"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/et_subscriberId"
+            android:layout_below="@+id/frame1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:drawable/edit_text"/>
+
+        <!--<EditText-->
+            <!--android:inputType="number"-->
+            <!--android:ellipsize="end"-->
+            <!--android:hint="@string/customerMobNo"-->
+            <!--android:background="@android:drawable/edit_text"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/etCustomerMobNo"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_below="@+id/et_subscriberId"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true" />-->
+
+        <AutoCompleteTextView
+            android:maxLength="10"
+            android:gravity="center"
+            android:hint="@string/customerMobNo"
+            android:background="@android:drawable/edit_text"
+            android:inputType="number"
+            android:dropDownHeight="200dp"
+            android:id="@+id/autoCustomerNo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_subscriberId"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_marginBottom="@dimen/five"
+            android:textColor="@color/white"
+            android:background="@color/submit_color"
+            android:text="@string/getbillamnt"
+            android:textSize="@dimen/fifteen"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:id="@+id/btgetbillamnt"
+            android:gravity="center"
+            android:layout_below="@+id/autoCustomerNo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:ellipsize="end"
+            android:hint="@string/enter_amount"
+            android:background="@android:drawable/edit_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:gravity="center"
+            android:id="@+id/etEnterAmount"
+            android:layout_below="@+id/btgetbillamnt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <EditText
+            android:visibility="gone"
+            android:ellipsize="end"
+            android:hint="@string/dueDate"
+            android:background="@android:drawable/edit_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:gravity="center"
+            android:id="@+id/etDueDate"
+            android:layout_below="@+id/etEnterAmount"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+        <RadioGroup
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:orientation="horizontal"
+            android:id="@+id/rdGrpbill"
+            android:gravity="center"
+            android:layout_below="@+id/etDueDate">
+            <RadioButton android:id="@+id/rbt_bluebill"
+
+                android:text="@string/blueBill"
+                android:layout_width="@dimen/onehundredfive"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fifteen"/>
+            <RadioButton android:id="@+id/rbtn_greenbill"
+                android:text="@string/greenBill"
+                android:layout_width="@dimen/onehundredfive"
+                android:textSize="@dimen/fifteen"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <Button
+            android:textSize="@dimen/fifteen"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:text="@string/Pay"
+            android:background="@color/submit_color"
+            android:id="@+id/btnRecharge"
+            android:textColor="@color/white"
+            android:layout_below="@+id/rdGrpbill"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:id="@+id/page2"
+            android:layout_below="@+id/page1">
+
+
+            <EditText
+                android:maxLength="8"
+                android:ellipsize="end"
+                android:inputType="number"
+                android:hint="@string/str_tpin"
+                android:id="@+id/et_tpin"
+                android:layout_marginTop="@dimen/fifteen"
+                android:background="@android:drawable/edit_text"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:textColor="@color/white"
+                android:background="@color/submit_color"
+                android:id="@+id/btnTpinSubmit"
+                android:text="@string/submit"
+                android:layout_below="@+id/et_tpin"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="@dimen/ten"
+                />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:textColor="@color/white"
+                android:background="@color/submit_color"
+                android:id="@+id/btnTpinCancel"
+                android:text="@string/cancel"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,132 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+
+    <FrameLayout
+    android:layout_marginLeft="@dimen/ten"
+    android:id="@+id/framevalue"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/fourty"
+    android:background="@drawable/editbackground"
+    android:orientation="horizontal"
+    android:layout_below="@+id/et_beneficiary_mobno"
+    android:layout_marginTop="@dimen/ten">
+
+    <Spinner
+    android:id="@+id/spinnerServiceProviderName"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/editbackground"
+    android:spinnerMode="dropdown"
+    android:textColor="@color/white" />
+
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|right"
+    android:background="@drawable/arrow"
+    android:contentDescription="@string/app_name" />
+    </FrameLayout>
+    <FrameLayout
+    android:layout_marginLeft="@dimen/ten"
+    android:id="@+id/framevalue1"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/fourty"
+    android:background="@drawable/editbackground"
+    android:orientation="horizontal"
+    android:layout_below="@+id/et_beneficiary_mobno"
+    android:layout_marginTop="@dimen/ten">
+
+    <Spinner
+    android:id="@+id/spinnerServiceCircleName"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/editbackground"
+    android:spinnerMode="dropdown"
+    android:textColor="@color/white" />
+
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|right"
+    android:background="@drawable/arrow"
+    android:contentDescription="@string/app_name" />
+    </FrameLayout>
+
+    <FrameLayout
+    android:layout_marginLeft="@dimen/ten"
+    android:id="@+id/framevalue2"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/fourty"
+    android:background="@drawable/editbackground"
+    android:orientation="horizontal"
+    android:layout_below="@+id/et_beneficiary_mobno"
+    android:layout_marginTop="@dimen/ten">
+
+    <Spinner
+    android:id="@+id/spinnerplan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/editbackground"
+    android:spinnerMode="dropdown"
+    android:textColor="@color/white" />
+
+    <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical|right"
+    android:background="@drawable/arrow"
+    android:contentDescription="@string/app_name" />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/amountid"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/fifteen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/amount" />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/validity" />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight=".3"
+            android:layout_height="wrap_content"
+            android:text="@string/talktime" />
+    </LinearLayout>
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar_browseplan"
+        android:layout_gravity="center"
+        android:layout_above="@+id/macPage2"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ListView
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/browseplanelistview"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+
+
+
+
+</LinearLayout>

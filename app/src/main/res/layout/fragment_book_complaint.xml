@@ -1,0 +1,256 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_mpin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <ImageView
+        android:id="@+id/iv_book_complain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"
+
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:text="@string/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+        android:id="@+id/tvBookImageText"
+        />
+
+    <ScrollView
+        android:layout_below="@+id/tvBookImageText"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    <LinearLayout
+        android:padding="16dp"
+
+        android:layout_below="@+id/ScrollView01"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/book"
+            android:id="@+id/tv_book"
+            android:textColor="@color/HeaderGray"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:textSize="@dimen/thirty"
+            android:gravity="center"
+            />
+        <TextView
+
+            android:id="@+id/tvexceptionbookcomplaint"
+            android:textColor="@color/submit_color"
+            android:layout_marginTop="@dimen/ten"
+            android:textSize="@dimen/fifteen"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:ellipsize="end"
+            android:inputType="number"
+            android:padding="@dimen/eight"
+            android:layout_marginTop="@dimen/ten"
+            android:id="@+id/et_AlternateNo"
+            android:layout_below="@+id/tvexceptionbookcomplaint"
+            android:hint="@string/enter_AltNo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/editextStyle"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eigthteen"
+            android:gravity="left|center_vertical"
+            android:maxLength="10"
+            />
+
+
+
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="left|center_vertical"
+            android:background="@drawable/editbackground"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ten">
+
+
+            <Spinner
+                android:id="@+id/spCall"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:spinnerMode="dropdown"
+                android:layout_below="@+id/et_AlternateNo"
+                android:textColor="@color/white"
+                android:prompt="@string/CallSpinner_title"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/arrow"
+                android:contentDescription="@string/app_name" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameCallSub"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="left|center_vertical"
+            android:background="@drawable/editbackground"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ten">
+            <Spinner
+                android:id="@+id/spCallSub"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:spinnerMode="dropdown"
+                android:layout_below="@+id/spCall"
+                android:textColor="@color/white"
+                android:prompt="@string/Call_SubCategory_title"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/arrow"
+                android:contentDescription="@string/app_name" />
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameLanguage"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="left|center_vertical"
+            android:background="@drawable/editbackground"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ten">
+
+            <Spinner
+                android:id="@+id/spLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/white"
+                android:layout_below="@+id/spCallSub"
+                android:prompt="@string/Language_Spinner_title"
+                />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/arrow"
+            android:contentDescription="@string/app_name" />
+
+    </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameSupportChannel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="left|center_vertical"
+            android:background="@drawable/editbackground"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ten">
+
+        <Spinner
+                android:id="@+id/spSupportChannel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/editbackground"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/white"
+                android:layout_below="@+id/spLanguage"
+                android:prompt="@string/Support_Channel_Spinner_title"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/arrow"
+                android:contentDescription="@string/app_name" />
+
+        </FrameLayout>
+
+
+
+
+        <EditText
+            android:ellipsize="end"
+            android:inputType="number"
+            android:padding="@dimen/eight"
+            android:layout_marginTop="@dimen/ten"
+            android:id="@+id/et_enter_trans"
+            android:layout_below="@+id/spSupportChannel"
+            android:hint="@string/enter_trans"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/editextStyle"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eigthteen"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="left|center_vertical"
+            android:maxLength="10"
+            />
+
+        <EditText
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eigthteen"
+            style="@style/editextStyle"
+            android:layout_below="@+id/et_enter_comment"
+            android:id="@+id/et_enter_comment"
+            android:lines="8"
+            android:minLines="6"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:hint="@string/enter_comment"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:scrollbars="vertical">
+        </EditText>
+
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/submit"
+            android:layout_marginTop="@dimen/ten"
+            android:id="@+id/btn_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            />
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/cancel"
+            android:layout_marginTop="@dimen/ten"
+            android:id="@+id/btn_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+           />
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+

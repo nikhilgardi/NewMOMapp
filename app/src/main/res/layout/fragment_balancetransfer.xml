@@ -1,0 +1,142 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <ImageView
+        android:id="@+id/img_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:id="@+id/tvBalanceTransferImageText"
+        android:text="@string/paymentTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbarTpin"
+
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <ScrollView
+        android:layout_below="@+id/tvBalanceTransferImageText"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <LinearLayout
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paymentTransfer"
+                android:id="@+id/tvBalanceTransferHeader"
+                android:textColor="@color/HeaderGray"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginBottom="@dimen/twenty"
+                android:textSize="@dimen/thirty"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tvexceptionbalancetransfer"
+                android:textColor="@color/submit_color"
+                android:layout_marginTop="@dimen/ten"
+                android:textSize="@dimen/fifteen"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+               />
+
+            <!--<EditText-->
+                <!--android:inputType="number"-->
+                <!--android:ellipsize="end"-->
+                <!--android:background="@android:drawable/edit_text"-->
+                <!--android:id="@+id/etCustomerMobNo"-->
+                <!--android:layout_below="@+id/spinner"-->
+                <!--android:hint="@string/enterMobileno"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:maxLength="10"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--/>-->
+            <AutoCompleteTextView
+                android:nextFocusDown="@+id/etAmount"
+                android:imeOptions="actionNext"
+                android:maxLength="10"
+                android:gravity="center"
+                android:hint="@string/enterMobileno"
+                style="@style/editextStyle"
+                android:inputType="number"
+                android:dropDownHeight="200dp"
+                android:id="@+id/autoCustomerNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                />
+            <EditText
+                android:nextFocusDown="@+id/et_enter_transremark"
+                android:maxLength="5"
+                style="@style/editextStyle"
+                android:id="@+id/etAmount"
+                android:hint="@string/enter_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:inputType="number"
+                android:ellipsize="end"
+                />
+            <EditText
+                android:imeOptions="actionDone"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eigthteen"
+                style="@style/editextStyle"
+                android:layout_below="@+id/etAmount"
+                android:id="@+id/et_enter_transremark"
+                android:lines="8"
+                android:minLines="6"
+                android:gravity="top|center"
+                android:maxLines="10"
+                android:hint="@string/enter_transremark"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:scrollbars="vertical">
+            </EditText>
+
+            <Button
+               style="@style/buttonStyle"
+                android:text="@string/btnTransfer"
+                android:layout_marginTop="@dimen/ten"
+                android:id="@+id/btnTransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:layout_marginBottom="30dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+

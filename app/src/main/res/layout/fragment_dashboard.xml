@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/gray"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/dashboard">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/dashboard"/>
+    <!--<ImageView-->
+
+        <!--android:layout_width="90dp"-->
+        <!--android:layout_height="90dp"-->
+        <!--android:id="@+id/iv_profileImg"-->
+        <!--android:layout_above="@+id/tvName"-->
+        <!--android:src="@drawable/profileimg"-->
+        <!--android:layout_centerHorizontal="true"-->
+
+
+
+
+       <!--/>-->
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/iv_profileImg"
+        android:layout_above="@+id/tvName"
+        android:src="@drawable/profileimg"
+        android:layout_centerHorizontal="true"
+
+
+        />
+
+
+    <ImageView
+        android:id="@+id/imageAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp" />
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <!--<ImageView-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:id="@+id/iv_profileImg"-->
+        <!--android:layout_above="@+id/name"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--/>-->
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/twenty"
+        android:layout_above="@+id/lbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/eight" />
+    <!--<TextView-->
+        <!--android:id="@+id/tvBalance"-->
+
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Rs.100.00"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/fifteen"-->
+        <!--android:layout_above="@+id/lbtn"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btnChangeImage"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="#f26522"-->
+        <!--android:text="Payment History"-->
+        <!--android:layout_below="@+id/imageView1"-->
+        <!--android:layout_toLeftOf="@+id/btnChangeImage1"-->
+        <!--android:layout_toStartOf="@+id/btnChangeImage1" />-->
+    <!--<Button-->
+        <!--android:id="@+id/btnChangeImage1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="#f26522"-->
+        <!--android:text="Load Money"-->
+        <!--android:layout_below="@+id/imageView1"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
+    <LinearLayout
+        android:layout_below="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lbtn"
+
+        >
+
+        <Button
+            android:textColor="@color/white"
+            android:background="@color/bluebtn"
+            android:layout_weight="1"
+            android:id="@+id/btn_payment"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:text="@string/Transaction_history" />
+
+        <Button
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:background="@color/bluebtn"
+            android:id="@+id/btn_load_money"
+            android:layout_marginLeft="4dp"
+            android:text="@string/loadMoney"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:ems="10" />
+    </LinearLayout>
+    <!--android:columnWidth="90dp"-->
+    <GridView
+
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+
+
+        android:numColumns="5"
+        android:layout_below="@id/lbtn"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:id="@+id/gv"
+        android:drawSelectorOnTop="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        android:paddingTop="@dimen/twenty"
+        android:paddingRight="@dimen/ten"
+        android:paddingLeft="@dimen/ten"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+</RelativeLayout>

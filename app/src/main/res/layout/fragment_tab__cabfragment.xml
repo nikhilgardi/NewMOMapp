@@ -1,0 +1,162 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:layout_width="fill_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:padding="@dimen/sixteen"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+       >
+
+        <TextView
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_cab"
+            android:textSize="@dimen/thirty"
+            android:gravity="center"
+            android:id="@+id/tv_tabcab"
+            android:textColor="@color/HeaderGray"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/ten" />
+
+        <TextView
+            android:layout_marginTop="@dimen/ten"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tabcab"
+            android:id="@+id/tvexceptiontabcab"
+            android:textSize="@dimen/fifteen"
+            android:gravity="center"
+            android:textColor="@color/submit_color"
+
+            />
+
+
+
+        <RelativeLayout
+
+            android:id="@+id/page1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvexceptiontabcab"
+            >
+
+
+
+            <EditText
+                android:maxLength="10"
+                android:nextFocusDown="@+id/et_enter_sathi_mobno"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/five"
+                android:hint="@string/sathi_id"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/et_sathi_id"
+                android:layout_below="@+id/frame"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                style="@style/editextStyle"/>
+
+
+            <AutoCompleteTextView
+                android:imeOptions="actionNext"
+                android:nextFocusDown="@+id/et_sathi_amountno"
+                android:maxLength="10"
+                android:gravity="center"
+                android:hint="@string/enter_sathi_mobno"
+                style="@style/editextStyle"
+                android:inputType="number"
+                android:dropDownHeight="200dp"
+                android:id="@+id/et_enter_sathi_mobno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_sathi_id"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:maxLength="5"
+                android:ellipsize="end"
+                android:hint="@string/sathi_amountno"
+                style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:gravity="center"
+                android:id="@+id/et_sathi_amountno"
+                android:layout_below="@+id/et_enter_sathi_mobno"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:layout_marginTop="@dimen/two"
+                    android:layout_below="@+id/et_sathi_amountno"
+                    android:id="@+id/btn_cabsubmit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:text="@string/submit" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressbar"
+
+            android:layout_above="@+id/page2"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+
+            android:id="@+id/page2"
+            android:layout_below="@+id/page1">
+
+
+            <EditText
+                android:maxLength="8"
+                android:ellipsize="end"
+                android:inputType="numberPassword"
+                android:hint="@string/str_tpin"
+                android:id="@+id/et_tpin"
+                android:layout_marginTop="@dimen/fifteen"
+                style="@style/editextStyle"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btnTpinSubmit"
+                android:text="@string/submit"
+                android:layout_marginBottom="@dimen/ten"
+                />
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/btnTpinCancel"
+                android:text="@string/cancel"/>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

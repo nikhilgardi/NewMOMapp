@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/dashboard">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/dashboard"/>
+
+    <ImageView
+        android:layout_marginLeft="@dimen/five"
+        android:layout_marginTop="@dimen/fifteen"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/iv_profileImg"
+        android:src="@drawable/profileimg"
+        android:layout_gravity="center_vertical"/>
+
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+    <TextView
+        android:text=""
+        android:textStyle="bold"
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/eigthteen"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_below="@+id/selectedImage"
+        android:layout_toRightOf="@+id/iv_profileImg"
+        android:layout_toEndOf="@+id/iv_profileImg" />
+
+    <LinearLayout
+        android:layout_below="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lbtn"
+        >
+
+        <Button
+
+            style="@style/buttonBlueStyle"
+            android:layout_weight="1"
+            android:id="@+id/btn_payment"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:text="@string/Transaction_history" />
+
+        <Button
+
+            style="@style/buttonBlueStyle"
+            android:layout_weight="1"
+            android:id="@+id/btn_load_money"
+            android:layout_marginLeft="4dp"
+            android:text="@string/loadMoney"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:ems="10" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/lbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinearLayouthorizontalScroll"
+            android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinearLayoutPayments"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tvPaymentText"
+                android:textSize="@dimen/fifteen"
+                android:padding="@dimen/five"
+                android:layout_width="@dimen/home_textview_width"
+                android:layout_height="match_parent"
+                android:text="@string/Payments"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsvPayments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/five"
+                    android:padding="@dimen/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:id="@+id/ivMobilePayments"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/mobilepayment"
+                        android:contentDescription="@string/app_name" />
+                    <ImageView
+                        android:id="@+id/ivDTH"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/dthpayment"
+                        android:contentDescription="@string/app_name" />
+                    <ImageView
+                        android:id="@+id/ivUBP"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/billpayment"
+                        android:contentDescription="@string/app_name" />
+                    <!--<ImageView-->
+                        <!--android:id="@+id/ivLIC"-->
+                        <!--android:layout_margin="@dimen/five"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_gravity="center_vertical|end"-->
+                        <!--android:background="@drawable/licpayment"-->
+                        <!--android:contentDescription="@string/app_name" />-->
+                    <ImageView
+                        android:id="@+id/ivTabCab"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/tabcab"
+                        android:contentDescription="@string/app_name" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinearLayoutMoneyTransfer"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/fifteen"
+                android:padding="@dimen/five"
+                android:id="@+id/tvMoneyTransferText"
+                android:gravity="center"
+                android:layout_width="@dimen/home_textview_width"
+                android:layout_height="match_parent"
+                android:text="@string/MoneyTransfer"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsvMoneyTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="@dimen/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:id="@+id/ivMoneyTransfer"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/moneytransfer"
+                        android:contentDescription="@string/app_name" />
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            </LinearLayout>
+
+         <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinearLayoutGift"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/fifteen"
+                android:padding="@dimen/five"
+                android:id="@+id/tvGifttext"
+                android:gravity="center"
+                android:layout_width="@dimen/home_textview_width"
+                android:layout_height="match_parent"
+                android:text="@string/OnlineShooping"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsvGift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="@dimen/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:id="@+id/ivGiftVoucher"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/giftvoucher"
+                        android:contentDescription="@string/app_name" />
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinearLayoutTickets"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/fifteen"
+                android:padding="@dimen/five"
+                android:id="@+id/tvTickettext"
+                android:gravity="center"
+                android:layout_width="@dimen/home_textview_width"
+                android:layout_height="match_parent"
+                android:text="@string/Tickets"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsvTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="@dimen/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:id="@+id/ivBus"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/bus"
+                        android:contentDescription="@string/app_name" />
+                    <ImageView
+                        android:id="@+id/ivTrain"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/train"
+                        android:contentDescription="@string/app_name" />
+                    <ImageView
+                        android:id="@+id/ivAirLine"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/airline"
+                        android:contentDescription="@string/app_name" />
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinearLayoutSettings"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/fifteen"
+                android:padding="@dimen/five"
+                android:id="@+id/tvSettingstext"
+                android:gravity="center"
+                android:layout_width="@dimen/home_textview_width"
+                android:layout_height="match_parent"
+                android:text="@string/Settings"/>
+
+            <HorizontalScrollView
+                android:id="@+id/hsvSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="@dimen/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:id="@+id/ivSettings"
+                        android:layout_margin="@dimen/five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|end"
+                        android:background="@drawable/dash_settings"
+                        android:contentDescription="@string/app_name" />
+
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

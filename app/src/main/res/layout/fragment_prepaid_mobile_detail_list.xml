@@ -1,0 +1,222 @@
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.wdullaer.swipeactionlistview.example.MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_mpin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero">
+    <ImageView
+        android:id="@+id/img_image"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sixty"
+
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:text="@string/Transaction_history"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+        android:id="@+id/tvPrepaidMobImageText"
+        />
+
+    <TextView
+        android:capitalize="words"
+        android:layout_below="@+id/img_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/transaction_history"
+        android:id="@+id/tv_prepared_mobile"
+        android:textColor="@color/HeaderGray"
+        android:layout_marginTop="@dimen/twenty"
+        android:layout_marginBottom="@dimen/twenty"
+        android:textSize="@dimen/thirty"
+        android:gravity="center"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lowest"
+        android:background="@color/view_color"/>
+
+    <LinearLayout
+
+        android:id="@id/page1"
+        android:layout_below="@+id/tv_prepared_mobile"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+
+            android:transcriptMode="alwaysScroll"
+
+            android:layout_below="@+id/notifications"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listview1"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="@dimen/five"
+        android:id="@+id/page2"
+        android:visibility="gone"
+        android:layout_below="@+id/page1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_successfull"
+            android:id="@+id/tv_transaction_successfull"
+            android:textColor="@color/HeaderGreen"
+            android:layout_marginTop="@dimen/twenty"
+            android:textSize="@dimen/text_size"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:padding="@dimen/five"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/tv_transaction_id"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/trasaction_id"
+                android:textSize="@dimen/sixteen"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_transaction_id1"
+                android:text="@string/tran_id"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:textSize="@dimen/sixteen"/>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="@dimen/five"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_transaction_type"
+                android:textColor="@color/black"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/trasaction_type"
+                android:textSize="@dimen/sixteen"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_transaction_type1"
+                android:text="@string/trasaction_type1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:textSize="@dimen/sixteen"/>/>
+        </LinearLayout>
+        <LinearLayout
+            android:padding="@dimen/five"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_mobile_no"
+                android:textColor="@color/black"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:text="@string/mobile_number"
+                android:textSize="@dimen/sixteen"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_mobile_no1"
+                android:text="@string/mobile_number1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sixteen"
+                android:ems="10" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="@dimen/five"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_amount"
+                android:textColor="@color/black"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sixteen"
+                android:text="@string/amount" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_amount1"
+                android:text="@string/amount1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+
+                android:textSize="@dimen/sixteen"
+                android:ems="10" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="@dimen/five"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_transaction_time"
+                android:textColor="@color/black"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sixteen"
+                android:text="@string/tran_time" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_transaction_time1"
+                android:text="@string/tran_time1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+
+                android:textSize="@dimen/sixteen"
+                android:ems="10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarTransactionDetails"
+        android:layout_above="@id/page1"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
+

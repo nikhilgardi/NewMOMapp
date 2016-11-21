@@ -1,0 +1,276 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/iv_payment_request"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"
+        />
+    <TextView
+        android:text="@string/PaymentRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/twenty"
+        android:paddingRight="@dimen/twenty"
+        android:id="@+id/tv_PaymentRequestImageText"
+        />
+    <ScrollView
+        android:layout_below="@+id/tv_PaymentRequestImageText"
+        android:id="@+id/ScrollView01"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:layout_below="@+id/iv_payment_request"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/sixteen">
+
+            <TextView
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PaymentRequest"
+                android:textSize="@dimen/thirty"
+                android:gravity="center"
+                android:id="@+id/tv_PaymentRequest"
+                android:textColor="@color/HeaderGray"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/ten" />
+            <TextView
+                android:layout_marginTop="@dimen/ten"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_PaymentRequest"
+                android:id="@+id/tvExepPaymentRequest"
+                android:textSize="@dimen/fifteen"
+                android:gravity="center"
+                android:textColor="@color/submit_color"
+                />
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fourty"
+                android:background="@drawable/editbackground"
+                android:orientation="horizontal"
+                android:layout_below="@+id/tvExepPaymentRequest"
+                android:layout_marginTop="@dimen/ten">
+
+
+                <Spinner
+                    android:id="@+id/spinnerBankMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editbackground"
+                    android:spinnerMode="dropdown"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_marginTop="@dimen/five"
+                android:id="@+id/frame1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/editbackground"
+                android:orientation="horizontal"
+                android:layout_below="@+id/frame"
+                android:layout_marginBottom="@dimen/five"
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinnerPaymentMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/editbackground"
+                    android:spinnerMode="dropdown"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/app_name" />
+            </FrameLayout>
+            <EditText
+                android:nextFocusDown="@+id/et_branch_name"
+                android:inputType="number"
+                android:ellipsize="end"
+                android:maxLength="15"
+                android:hint="@string/chequeno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:id="@+id/et_chequeno"
+                android:layout_below="@+id/frame1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                style="@style/editextStyle"/>
+
+
+            <EditText
+                android:nextFocusDown="@+id/et_customer_ifsc_code"
+                android:maxLength="15"
+                android:ellipsize="end"
+
+                android:hint="@string/branch_name"
+                 style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:gravity="center"
+                android:id="@+id/et_branch_name"
+                android:layout_below="@+id/et_chequeno"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:maxLines="1"
+                android:singleLine="true"
+                android:maxLength="11"
+                android:ellipsize="end"
+                android:nextFocusDown="@+id/et_amount_payment"
+                android:hint="@string/customer_ifsc_code"
+                 style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:ems="10"
+                android:gravity="center"
+                android:id="@+id/et_customer_ifsc_code"
+                android:layout_below="@+id/et_branch_name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:ellipsize="end"
+                android:hint="@string/dateofbirth"
+                 style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:gravity="center"
+                android:id="@+id/et_depositedate"
+                android:layout_below="@+id/et_customer_ifsc_code"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:maxLength="5"
+                android:ellipsize="end"
+                android:nextFocusDown="@+id/et_enter_remark"
+                android:hint="@string/amount_payment"
+                 style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:gravity="center"
+                android:id="@+id/et_amount_payment"
+                android:layout_below="@+id/et_depositedate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <!--<TextView-->
+                <!--android:layout_below="@+id/et_amount_payment"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="@dimen/sixty"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:textSize="@dimen/twenty"-->
+                <!--android:paddingRight="@dimen/twenty"-->
+                <!--android:id="@+id/tv_totalcount"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:imeOptions="actionDone"-->
+                <!--android:ellipsize="end"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/eigthteen"-->
+                 <!--style="@style/editextStyle"-->
+                <!--android:layout_below="@+id/et_amount_payment"-->
+                <!--android:id="@+id/et_enter_remark"-->
+                <!--android:gravity="top|center"-->
+                <!--android:maxLines="10"-->
+                <!--android:hint="@string/enter_remark"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:scrollbars="vertical">-->
+            <!--</EditText>-->
+            <EditText
+                style="@style/editextStyle"
+                android:gravity="top|center"
+                android:textSize="@dimen/eigthteen"
+                android:textColor="@color/black"
+                android:ellipsize="end"
+                android:id="@+id/et_enter_remark"
+                android:layout_below="@+id/et_amount_payment"
+                android:singleLine="true"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:hint="@string/enter_remark"
+                android:selectAllOnFocus="true"
+                android:maxLines="10"
+                android:imeOptions="actionNext"
+                />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <LinearLayout
+
+                android:layout_below="@+id/et_enter_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lbtn1"
+                android:layout_marginTop="@dimen/ten"
+                >
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/btnpaymentrequest"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:text="@string/submit" />
+
+                <Button
+                   style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/btnpaymentCancel"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:ems="10" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

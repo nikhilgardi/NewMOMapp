@@ -1,0 +1,179 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_mpin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <ImageView
+        android:id="@+id/ivResetTpinHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:text="@string/Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+        android:id="@+id/tvResetTpinImage"
+        />
+
+    <LinearLayout
+
+        android:layout_marginTop="@dimen/thirty"
+        android:padding="16dp"
+        android:layout_below="@+id/ivResetTpinHeader"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvResetTpinHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_tpin"
+            android:textColor="@color/HeaderGray"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:textSize="@dimen/thirty"
+            android:gravity="center"
+            />
+        <TextView
+            android:text=""
+            android:layout_marginTop="@dimen/ten"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvExcepionResetTpin"
+            android:gravity="center"
+            android:textSize="@dimen/fifteen"
+            android:textColor="@color/submit_color"/>
+
+        <LinearLayout
+
+            android:id="@+id/Page1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:maxLength="10"
+                android:ellipsize="end"
+
+
+
+                android:inputType="number"
+                android:padding="@dimen/eight"
+                style="@style/editextStyle"
+                android:id="@+id/etMobNo"
+                android:layout_below="@+id/textView"
+                android:hint="@string/enterMobileno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />
+            <LinearLayout
+
+                android:layout_below="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lbtn_forgotpwPage1"
+                >
+
+                <Button
+                   style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/btnSubmitMobno"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:text="@string/submit" />
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/btnCancelMobno"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:ems="10" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/Page2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <EditText
+                android:maxLength="6"
+                android:ellipsize="end"
+                android:inputType="number"
+                style="@style/editextStyle"
+                android:id="@+id/etOTP"
+                android:layout_below="@+id/et_old_mpin"
+                android:hint="@string/OTP"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:textColor="@color/submit_color"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/tvOtpTimer"
+                android:gravity="center"
+                android:paddingRight="@dimen/ten"
+                android:layout_alignTop="@+id/etOTP"
+                android:layout_alignBottom="@+id/etOTP"
+                android:layout_alignRight="@+id/etOTP"/>
+
+            <LinearLayout
+                android:layout_below="@+id/etOTP"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/lbtn_forgotpwPage2"
+                >
+
+                <Button
+                    style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/btnSubmitOTP"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:text="@string/submit" />
+
+                <Button
+                   style="@style/buttonStyle"
+                    android:layout_weight="1"
+                    android:id="@+id/btnCancelOTP"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/fourty"
+                    android:ems="10" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_marginTop="@dimen/fifty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/tvResetTpinImage"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

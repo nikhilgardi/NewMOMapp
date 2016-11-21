@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="@dimen/sixteen"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dthRecharge"
+        android:textSize="@dimen/thirty"
+        android:gravity="center"
+        android:id="@+id/tvDthText"
+        android:textColor="@color/HeaderGray"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ten" />
+
+    <TextView
+        android:layout_marginTop="@dimen/ten"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDthText"
+        android:id="@+id/tvExepdth"
+        android:textSize="@dimen/fifteen"
+        android:gravity="center"
+        android:textColor="@color/submit_color"
+
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/page1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvExepdth"
+
+        >
+
+
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fourty"
+        android:background="@drawable/editbackground"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="@dimen/ten">
+
+
+        <Spinner
+
+            android:id="@+id/spinner_dth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/editbackground"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/arrow"
+            android:contentDescription="@string/app_name" />
+    </FrameLayout>
+
+    <!--<Spinner-->
+    <!--android:text="Enter Mobile No."-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="28dp"-->
+    <!--android:id="@+id/spinner"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="50dp"-->
+    <!--android:background="@drawable/editbackground"-->
+
+    <!--/>-->
+    <EditText
+
+        style="@style/editextStyle"
+        android:nextFocusDown="@+id/etCustomerNo"
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/five"
+        android:hint="@string/subscriberID"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etSubscriberId"
+        android:layout_below="@+id/frame"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <!--<EditText-->
+        <!--android:maxLength="10"-->
+        <!--android:ellipsize="end"-->
+        <!--android:inputType="number"-->
+        <!--android:hint="@string/customerMobNo"-->
+        <!---->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/etCustomerNo"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_below="@+id/etSubscriberId"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+    <AutoCompleteTextView
+        style="@style/editextStyle"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@+id/et_enterRechargeAmnt"
+        android:maxLength="10"
+        android:gravity="center"
+        android:hint="@string/customerMobNo"
+        
+        android:inputType="number"
+        android:dropDownHeight="200dp"
+        android:id="@+id/etCustomerNo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etSubscriberId"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <!--<EditText-->
+
+        <!--android:maxLength="5"-->
+        <!--android:ellipsize="end"-->
+        <!--android:hint="@string/enterRechargeAmount"-->
+        <!---->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="number"-->
+        <!--android:ems="10"-->
+        <!--android:gravity="center"-->
+        <!--android:id="@+id/et_enterRechargeAmnt"-->
+        <!--android:layout_below="@+id/etCustomerNo"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:textColorHint="#cccccc"/>-->
+        
+        <EditText
+            
+            style="@style/editextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enterRechargeAmount"
+            android:inputType="number"
+            android:maxLength="5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/etCustomerNo"
+            android:id="@+id/et_enterRechargeAmnt"
+            />
+
+    <Button
+        style="@style/buttonStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fourty"
+        android:text="@string/recharge"
+        android:id="@+id/btnRecharge"
+        android:layout_marginBottom="@dimen/thirty"
+        android:layout_below="@+id/et_enterRechargeAmnt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarTpin"
+
+        android:layout_above="@+id/page2"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:id="@+id/page2"
+        android:layout_below="@+id/page1">
+
+
+        <EditText
+            android:maxLength="8"
+            android:ellipsize="end"
+            android:inputType="numberPassword"
+            android:hint="@string/str_tpin"
+            android:id="@+id/et_tpin"
+            android:layout_marginTop="@dimen/fifteen"
+            style="@style/editextStyle"
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            style="@style/buttonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:id="@+id/btnTpinSubmit"
+            android:text="@string/submit"
+            android:layout_below="@+id/et_tpin"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/ten"
+            />
+        <Button
+            style="@style/buttonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:id="@+id/btnTpinCancel"
+            android:text="@string/cancel"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+    </ScrollView>

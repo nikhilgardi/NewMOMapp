@@ -1,0 +1,59 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_mpin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero">
+    <ImageView
+        android:id="@+id/img_image"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sixty"
+
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:text="@string/Transaction_history"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+        android:id="@+id/tvHistoryImageText"
+        />
+
+    <LinearLayout
+
+        android:layout_below="@+id/tvHistoryImageText"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Transaction_history"
+            android:id="@+id/tv_payment_history"
+            android:textColor="@color/HeaderGray"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:textSize="@dimen/thirty"
+            android:gravity="center"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lowest"
+            android:background="@color/view_color"/>
+        <ListView
+            android:background="@color/white"
+            android:layout_below="@+id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listview1"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+

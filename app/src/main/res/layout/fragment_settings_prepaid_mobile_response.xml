@@ -1,0 +1,162 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_mpin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero">
+    <ImageView
+        android:id="@+id/img_image"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sixty"
+
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:text="@string/Transaction_history"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+        android:id="@+id/tvTransactionImageText"
+        />
+
+
+    <LinearLayout
+        android:layout_below="@+id/tvTransactionImageText"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prepared_mobile_history"
+            android:id="@+id/tv_prepared_mobile_history"
+            android:textColor="@color/HeaderGray"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:textSize="@dimen/thirty"
+            android:gravity="center"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lowest"
+            android:background="@color/view_color"/>
+        <TextView
+            android:layout_marginLeft="@dimen/fifteen"
+            android:layout_width="@dimen/common"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_successfull"
+            android:id="@+id/tv_transaction_successfull"
+            android:textColor="@color/HeaderGreen"
+            android:layout_marginTop="@dimen/twenty"
+            android:textSize="@dimen/text_size"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_transaction_id"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trasaction_id" />
+
+            <TextView
+                android:id="@+id/tv_transaction_id1"
+                android:layout_marginLeft="@dimen/twenty_nine"
+                android:text="@string/tran_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_transaction_type"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trasaction_type" />
+
+            <TextView
+                android:id="@+id/tv_transaction_type1"
+                android:text="@string/trasaction_type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/thirteen"
+                android:ems="10" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_mobile_no"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mobile_number" />
+
+            <TextView
+                android:id="@+id/tv_mobile_no1"
+                android:layout_marginLeft="@dimen/twenty_three"
+                android:text="@string/mobile_number1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amount" />
+
+            <TextView
+                android:id="@+id/tv_amount1"
+                android:text="@string/amount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/seventy"
+                android:ems="10" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_transaction_time"
+                android:layout_marginLeft="@dimen/fifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tran_time" />
+
+            <TextView
+                android:id="@+id/tv_transaction_time1"
+                android:text="@string/tran_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/ten"
+                android:ems="10" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

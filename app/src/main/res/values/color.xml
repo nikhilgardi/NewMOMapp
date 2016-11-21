@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--NIkhils color-->
+    <color name="submit_color">#f26522</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="HeaderGray">#787878</color>
+    <color name="view_color">#DCDCDC</color>
+    <color name="gray">#f1f1ef</color>
+    <color name="bluebtn">#00aeef</color>
+    <color name="HeaderGreen">#0fa200</color>
+    <color name="listview_color">#585858</color>
+    <color name="Balancecolor">#0e2f63</color>
+    <!--<color name="progress_color">#008513</color>-->
+
+    <color name="progress_color">#00acac</color>
+    <color name="failed">#ff5b57</color>
+    <color name="pending">#f59c1a</color>
+    <color name="etpin_color">#f2f1d5</color>
+
+    <!--NIkhils color end-->
+</resources>
+
+

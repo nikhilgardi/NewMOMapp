@@ -1,0 +1,121 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <TextView
+        android:id="@+id/tvexceptionIFSCCODE"
+        android:textColor="@color/submit_color"
+        android:layout_marginTop="@dimen/ten"
+        android:textSize="@dimen/fifteen"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_marginLeft="@dimen/ten"
+        android:id="@+id/framevalue"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fourty"
+        android:background="@drawable/editbackground"
+        android:orientation="horizontal"
+        android:layout_below="@+id/et_beneficiary_mobno"
+        android:layout_marginTop="@dimen/ten">
+
+        <Spinner
+
+            android:id="@+id/spinnerGetIFSCBanks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/editbackground"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/arrow"
+            android:contentDescription="@string/app_name" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginLeft="@dimen/ten"
+        android:id="@+id/framevalue1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fourty"
+        android:background="@drawable/editbackground"
+        android:orientation="horizontal"
+        android:layout_below="@+id/et_beneficiary_mobno"
+        android:layout_marginTop="@dimen/ten">
+
+        <Spinner
+
+            android:id="@+id/spinnerGetIFSCStates"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/editbackground"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/arrow"
+            android:contentDescription="@string/app_name" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_marginLeft="@dimen/ten"
+        android:id="@+id/framevalue2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fourty"
+        android:background="@drawable/editbackground"
+        android:orientation="horizontal"
+        android:layout_below="@+id/et_beneficiary_mobno"
+        android:layout_marginTop="@dimen/ten">
+
+        <Spinner
+            android:id="@+id/spinnerGetIFSCCity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/editbackground"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/arrow"
+            android:contentDescription="@string/app_name" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_marginLeft="@dimen/ten"
+        android:id="@+id/framevalue3"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fourty"
+        android:background="@drawable/editbackground"
+        android:orientation="horizontal"
+        android:layout_below="@+id/et_beneficiary_mobno"
+        android:layout_marginTop="@dimen/ten">
+
+        <Spinner
+            android:id="@+id/spinnerGetIFSCBranch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/editbackground"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/arrow"
+            android:contentDescription="@string/app_name" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ch_mpin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero">
+    <ImageView
+        android:id="@+id/img_image"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/sixty"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:text="@string/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+       android:id="@+id/tv_NOtificationImageText"
+        />
+
+    <TextView
+        android:layout_below="@+id/tv_NOtificationImageText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notifications"
+        android:id="@+id/tv_notifications"
+        android:textColor="@color/HeaderGray"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten"
+        android:textSize="@dimen/thirty"
+        android:gravity="center"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lowest"
+        android:background="@color/view_color"/>
+
+    <LinearLayout
+
+        android:id="@+id/page1"
+        android:layout_below="@+id/tv_notifications"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<android.support.v4.widget.SwipeRefreshLayout-->
+            <!--android:id="@+id/activity_main_swipe_refresh_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+        <ListView
+            android:background="@color/white"
+            android:layout_below="@+id/notifications"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listview1"
+            xmlns:android="http://schemas.android.com/apk/res/android" />
+
+   <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+        <TextView
+            android:id="@+id/empty"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No Notification to show" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/twenty"
+        android:visibility="gone"
+        android:id="@+id/page2"
+        android:orientation="vertical"
+        android:layout_below="@+id/tv_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="@dimen/ten"
+            android:textSize="@dimen/NotificationDetailTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDetailNotification"/>
+        <Button
+            style="@style/buttonStyle"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNotificationDetailBack"
+            android:text="@string/back"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

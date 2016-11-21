@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="5dp"
+
+
+    >
+
+
+    <TextView
+        android:padding="@dimen/five"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="@dimen/twenty"
+        android:textColor="@color/listview_color"
+        android:id="@+id/dialogTitle"
+        android:gravity="center" />
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/MobLayout"
+        android:padding="10dp"
+        >
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="@dimen/sixteen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:layout_weight="1"
+            android:id="@+id/ServiceIDText"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+
+            android:textSize="@dimen/sixteen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:layout_weight="1"
+            android:id="@+id/serviceIDParameter"
+            android:layout_gravity="center_horizontal" />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/operatorLayOut"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="@dimen/sixteen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:layout_weight="1"
+            android:id="@+id/operatorText"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+
+            android:textSize="@dimen/sixteen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:layout_weight="1"
+            android:id="@+id/operatorParameter"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/amountLayOut"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="@dimen/sixteen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:layout_weight="1"
+            android:id="@+id/amountText"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+
+
+            android:textSize="@dimen/sixteen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:layout_weight="1"
+            android:id="@+id/amountParameter"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+       
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lbtn"
+        android:padding="10dp"
+       
+        >
+
+        <Button
+            style="@style/buttonBlueStyle"
+            android:layout_weight="1"
+            android:id="@+id/btnOk"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:text="OK" />
+
+        <Button
+            style="@style/buttonBlueStyle"
+            android:layout_weight="1"
+            android:id="@+id/btnCancel"
+            android:layout_marginLeft="4dp"
+            android:text="cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:ems="10" />
+    </LinearLayout>
+
+</LinearLayout>

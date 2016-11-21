@@ -1,0 +1,152 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/zero"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+    <ImageView
+        android:id="@+id/img_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sixty"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:id="@+id/tvLoadMoneyImageText"
+        android:text="@string/loadMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/sixty"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/twenty"
+
+
+        />
+    <ScrollView
+        android:layout_below="@+id/tvLoadMoneyImageText"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loadMoney"
+                android:id="@+id/tvLoadMoneyHeader"
+                android:textColor="@color/HeaderGray"
+                android:layout_marginTop="@dimen/twenty"
+                android:layout_marginBottom="@dimen/twenty"
+                android:textSize="@dimen/thirty"
+                android:gravity="center"
+                />
+
+            <TextView
+
+                android:id="@+id/tvexceptionloadmoney"
+                android:textColor="@color/submit_color"
+                android:layout_marginTop="@dimen/ten"
+                android:textSize="@dimen/fifteen"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+
+
+            <!--<EditText-->
+                <!--android:background="@android:drawable/edit_text"-->
+                <!--android:id="@+id/etAmount"-->
+                <!--android:maxLength="5"-->
+                <!--android:hint="@string/enter_amount"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/black"-->
+
+                <!--android:gravity="center"-->
+                <!--android:inputType="number"-->
+                <!--android:ellipsize="end"-->
+                <!--/>-->
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/etAmount"
+                    android:maxLength="5"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="@string/enter_amount"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tvClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/ten"
+                    android:textColor="@color/bluebtn"
+                    android:layout_gravity="right|center_vertical"
+                    android:text="@string/clear" />
+
+            </FrameLayout>
+            <RadioGroup
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rdGrp"
+                android:gravity="center"
+                android:layout_below="@+id/etAmount"
+                android:visibility="visible">
+                <RadioButton
+                    android:id="@+id/rbtn_Amount50"
+
+                    android:text="50"
+                    android:layout_width="@dimen/one_hundredfive"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/thirteen"/>
+                <RadioButton android:id="@+id/rbtn_Amount100"
+                    android:text="100"
+                    android:layout_width="@dimen/one_hundredfive"
+                    android:textSize="@dimen/thirteen"
+                    android:layout_height="wrap_content"/>
+                <RadioButton android:id="@+id/rbtn_Amount500"
+                    android:text="500"
+                    android:layout_width="@dimen/one_hundredfive"
+                    android:textSize="@dimen/thirteen"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <Button
+                style="@style/buttonStyle"
+                android:text="@string/submit"
+                android:layout_below="@+id/radioGroup1"
+                android:layout_marginTop="@dimen/ten"
+                android:id="@+id/btnLoadMoneySubmit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/fourty"
+                android:layout_marginBottom="30dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+

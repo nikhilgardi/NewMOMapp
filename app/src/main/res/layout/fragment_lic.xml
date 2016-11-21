@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:padding="@dimen/fifteen"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <TextView
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Lic"
+            android:textSize="@dimen/thirty"
+            android:gravity="center"
+            android:id="@+id/tv_LicText"
+            android:textColor="@color/HeaderGray"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="@dimen/ten" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/submit_color"
+            android:layout_marginTop="@dimen/ten"
+            android:textSize="@dimen/fifteen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_LicText"
+            android:id="@+id/tvexceptionlic"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/page1"
+        android:layout_below="@+id/tvexceptionlic">
+
+
+
+    <EditText
+        android:ellipsize="end"
+        android:hint="@string/policyNo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPolicyNo"
+        android:gravity="center"
+        style="@style/editextStyle"
+        android:maxLength="10"
+        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--<EditText-->
+        <!--android:ellipsize="end"-->
+        <!--android:maxLength="10"-->
+        <!--android:inputType="number"-->
+        <!--android:hint="@string/mobileno"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/etMobNo"-->
+        <!--android:gravity="center"-->
+        <!--android:background="@android:drawable/edit_text"-->
+        <!--android:layout_below="@+id/etPolicyNo"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+        <AutoCompleteTextView
+            android:maxLength="10"
+            android:gravity="center"
+            android:hint="@string/customerMobNo"
+             style="@style/editextStyle"
+            android:inputType="number"
+            android:dropDownHeight="200dp"
+            android:id="@+id/autoCustomerNo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etPolicyNo"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <Button
+            style="@style/buttonStyle"
+            android:layout_below="@+id/autoCustomerNo"
+            android:id="@+id/btnSubmit"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:text="@string/submit" />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/page2"
+            android:layout_below="@+id/page1">
+
+        <TextView
+           
+            android:layout_marginTop="@dimen/ten"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Policy Holder:"
+            android:background="@drawable/editbackground"
+            android:textSize="@dimen/fifteen"
+            android:padding="@dimen/fifteen"
+            android:id="@+id/tvPolicyHolder"
+
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+           
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Premium Date:"
+            android:background="@drawable/editbackground"
+            android:textSize="@dimen/fifteen"
+            android:padding="@dimen/fifteen"
+            android:id="@+id/tvPremiumDate"
+            android:layout_below="@+id/tvPolicyHolder"
+            android:layout_centerHorizontal="true"
+            />
+
+
+        <TextView
+           
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="From:"
+            android:background="@drawable/editbackground"
+            android:textSize="@dimen/fifteen"
+            android:padding="@dimen/fifteen"
+            android:id="@+id/tvFrom"
+            android:layout_below="@+id/tvPremiumDate"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+           
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="To:"
+            android:background="@drawable/editbackground"
+            android:textSize="@dimen/fifteen"
+            android:padding="@dimen/fifteen"
+            android:id="@+id/tvTo"
+            android:layout_below="@+id/tvFrom"
+            android:layout_centerHorizontal="true"
+
+            />
+
+    <LinearLayout
+       
+        android:layout_below="@+id/tvTo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lbtn1"
+        android:layout_marginTop="@dimen/ten"
+        >
+
+        <Button
+
+            style="@style/buttonStyle"
+            android:layout_weight="1"
+            android:id="@+id/btnCashCollected"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:text="@string/cashColl" />
+
+        <Button
+            style="@style/buttonStyle"
+            android:layout_weight="1"
+            android:id="@+id/btnPage2Cancel"
+            android:layout_marginLeft="4dp"
+            android:text="@string/cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fourty"
+            android:ems="10" />
+    </LinearLayout>
+
+        </RelativeLayout>
+        <!--android:visibility="gone"-->
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/page3"
+        android:layout_below="@+id/page2">
+
+
+    <TextView
+       
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/trans_success"
+        android:gravity="center"
+        android:textSize="@dimen/twenty"
+        android:textColor="@color/HeaderGreen"
+        android:id="@+id/tvTransaction_successful"
+
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/ten" />
+
+    <Button
+        style="@style/buttonStyle"
+        android:layout_below="@+id/tvTransaction_successful"
+        android:id="@+id/btnCancelBack"
+        android:text="@string/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fourty"
+        android:ems="10"
+        android:layout_marginBottom="@dimen/twenty"/>
+
+        </RelativeLayout>
+</RelativeLayout>
+
+</ScrollView>

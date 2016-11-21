@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="@drawable/background"
+    >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeBackground"
+            android:background="@drawable/login_logo_new">
+       
+         <ImageView
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_new"
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            />
+        </RelativeLayout>
+        <!--<ProgressBar-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/progressBar"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_below="@+id/relativeBackground"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--/>-->
+
+        <RelativeLayout
+            android:id="@+id/LoginPage"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/fifteen"
+            android:layout_below="@+id/relativeBackground">
+
+            <TextView
+                android:text="@string/login"
+                android:id="@+id/tvLoginText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/thirty"
+                android:gravity="center"/>
+            <TextView
+                android:textColor="@color/submit_color"
+                android:id="@+id/tvexception"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fifteen"
+                android:gravity="center"
+                android:layout_below="@+id/tvLoginText"/>
+            <!--<EditText-->
+            <!--android:nextFocusDown="@+id/et_m_pin"-->
+            <!--android:hint="@string/CustomerID"-->
+            <!--android:maxLength="12"-->
+            <!--android:ellipsize="end"-->
+            <!--android:digits="abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"-->
+            <!--android:id="@+id/et_mobileno"-->
+            <!--android:layout_marginTop="@dimen/fifteen"-->
+            <!--android:background="@android:drawable/edit_text"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+            <EditText
+                android:maxLength="12"
+                android:inputType="textCapCharacters"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:nextFocusDown="@+id/et_m_pin"
+                android:ellipsize="end"
+                android:digits="abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:layout_marginTop="@dimen/five"
+                android:hint="@string/enterCustomerCode"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/et_mobileno"
+                style="@style/editextStyle"
+                android:layout_below="@+id/tvexception"/>
+            <EditText
+
+                android:hint="@string/enterMpin"
+                android:inputType="numberPassword"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:id="@+id/et_m_pin"
+                android:gravity="center"
+                style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_mobileno"/>
+            <TextView
+                android:text="@string/forgot_Password"
+                android:id="@+id/tv_forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:padding="@dimen/five"
+                android:layout_below="@+id/et_m_pin"
+                android:layout_alignRight="@+id/et_m_pin"
+                android:layout_alignEnd="@+id/et_m_pin" />
+            <Button
+                style="@style/buttonStyle"
+                android:text="@string/Login"
+                android:id="@+id/btnLogin"
+                android:layout_height="@dimen/fourty"
+                android:textSize="@dimen/fifteen"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center"
+                android:layout_below="@+id/tv_forgotPassword"
+                />
+
+
+            <EditText
+                style="@style/editextStyle"
+
+                android:visibility="gone"
+                android:hint="@string/OTP"
+                android:inputType="number"
+                android:ellipsize="end"
+                android:maxLength="6"
+                android:id="@+id/et_otp"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnLogin"/>
+
+            <TextView
+
+                android:textColor="@color/submit_color"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/fourty"
+                android:id="@+id/tvOtpTimer"
+                android:gravity="center"
+                android:paddingRight="@dimen/ten"
+                android:layout_alignTop="@+id/et_otp"
+                android:layout_alignBottom="@+id/et_otp"
+                android:layout_alignRight="@+id/et_otp"/>
+
+
+
+            <EditText
+                android:visibility="gone"
+                android:hint="@string/Enter_TPin"
+                android:inputType="numberPassword"
+                android:ellipsize="end"
+                android:maxLength="8"
+                android:id="@+id/et_LoginTPin"
+                android:gravity="center"
+                style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_otp"/>
+
+            <Button
+                style="@style/buttonStyle"
+                android:visibility="gone"
+                android:id="@+id/btnSubmitTPIN"
+                android:layout_height="@dimen/fourty"
+                android:textSize="@dimen/fifteen"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center"
+
+                android:layout_below="@+id/et_LoginTPin"
+                />
+
+            <Button
+                android:layout_marginTop="@dimen/ten"
+                style="@style/buttonStyle"
+                android:visibility="gone"
+                android:id="@+id/btnCancelTPIN"
+                android:layout_height="@dimen/fourty"
+                android:textSize="@dimen/fifteen"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center"
+
+                android:layout_below="@+id/btnSubmitTPIN"
+                />
+
+
+
+            <!--<EditText-->
+                <!--android:layout_marginTop="@dimen/thirty"-->
+                <!--android:visibility="visible"-->
+                <!--android:hint="@string/DevicePin"-->
+                <!--android:inputType="numberPassword"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLength="6"-->
+                <!--android:id="@+id/et_DevicePin"-->
+                <!--android:gravity="center"-->
+                <!--style="@style/editextStyle"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/btnSubmitTPIN"/>-->
+
+            <!--<TextView-->
+                <!--android:visibility="gone"-->
+                <!--android:textColor="@color/Balancecolor"-->
+                <!--android:text="@string/LoginDiffAccount"-->
+                <!--android:id="@+id/tvLoginDiffAccount"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:gravity="end"-->
+                <!--android:padding="@dimen/five"-->
+                <!--android:layout_below="@+id/et_DevicePin"-->
+                <!--android:layout_alignRight="@+id/et_DevicePin"-->
+                <!--android:layout_alignEnd="@+id/et_DevicePin" />-->
+
+
+            <EditText
+
+                android:visibility="gone"
+                android:hint="@string/DevicePin"
+                android:inputType="numberPassword"
+                android:ellipsize="end"
+
+
+                android:maxLength="6"
+                android:id="@+id/et_DevicePinInsert"
+                android:gravity="center"
+                style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnSubmitTPIN"/>
+
+            <EditText
+
+                android:visibility="gone"
+                android:hint="@string/ConfirmDevicePin"
+                android:inputType="numberPassword"
+                android:ellipsize="end"
+                android:maxLength="6"
+                android:id="@+id/et_ConfirmDevicePinInsert"
+                android:gravity="center"
+                style="@style/editextStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_DevicePinInsert"/>
+
+
+
+            <Button
+                style="@style/buttonStyle"
+                android:text="@string/submit"
+                android:visibility="gone"
+                android:id="@+id/btnSubmitDevicePIN"
+                android:layout_height="@dimen/fourty"
+                android:textSize="@dimen/fifteen"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center"
+                android:layout_below="@+id/et_ConfirmDevicePinInsert"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/twenty"
+            android:background="@drawable/background"
+            android:layout_below="@+id/LoginPage"
+            android:id="@+id/layout6DigitPin"
+            android:visibility="gone">
+
+            <EditText
+                style="@style/pin_edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_Pin1"
+                android:layout_weight="1" />
+            <EditText
+
+                style="@style/pin_edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_Pin2"
+                android:layout_weight="1" />
+            <EditText
+                style="@style/pin_edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_Pin3"
+                android:layout_weight="1" />
+            <EditText
+                style="@style/pin_edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_Pin4"
+                android:layout_weight="1" />
+            <EditText
+                style="@style/pin_edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_Pin5"
+                android:layout_weight="1" />
+            <EditText
+                style="@style/pin_edittext_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_Pin6"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <TextView
+        android:visibility="gone"
+        android:textColor="@color/Balancecolor"
+        android:text="@string/LoginDiffAccount"
+        android:id="@+id/tvLoginDiffAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/five"
+        android:layout_below="@+id/layout6DigitPin"
+        />
+
+
+
+        <TextView
+            android:layout_marginTop="@dimen/ninty_five"
+            android:visibility="gone"
+            android:text="@string/madeindia"
+            android:textColor="@color/submit_color"
+            android:id="@+id/tvmadeindia"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/thirteen"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/tvLoginDiffAccount"/>
+
+    </RelativeLayout>
+</ScrollView>
